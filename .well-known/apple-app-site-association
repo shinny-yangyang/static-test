@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ABC123XYZ9.com.example.cardapp",
+        "paths": ["/c/*"]
+      }
+    ]
+  }
+}
+
