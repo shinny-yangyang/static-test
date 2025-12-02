@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在打开 ENT-007</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 8px 0;
+        }
+        .spinner {
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#127924;</div>
+        <h1>正在打开卡片 ENT-007</h1>
+        <div class="spinner"></div>
+        <p id="status">正在检测设备...</p>
+    </div>
+
+    <script>
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+        }
+
+        function redirect() {
+            if (isIOS()) {
+                updateStatus('检测到 iOS 设备，正在跳转到 App Store...');
+                setTimeout(function() {
+                    window.location.href = 'https://apps.apple.com/us/app/id1187762307';
+                }, 800);
+            } else {
+                updateStatus('正在跳转到产品页面...');
+                setTimeout(function() {
+                    window.location.href = 'https://www.shinnytech.com/products/app';
+                }, 800);
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', redirect);
+    </script>
+</body>
+</html>
