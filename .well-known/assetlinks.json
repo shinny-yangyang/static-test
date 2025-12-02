@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.example.cardapp",
+      "package_name": "com.shinnytech.futures.kuaiqixiaoq.release",
       "sha256_cert_fingerprints": [
         "6F:49:FB:D9:83:B8:39:FD:5D:C5:A4:5A:46:53:8A:04:DF:BB:A9:5E:D4:CA:1D:74:48:87:F4:EE:AF:F1:BB:29"
       ]
